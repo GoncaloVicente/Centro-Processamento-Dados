@@ -1,0 +1,21 @@
+
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto br0
+iface br0 inet static
+	address 172.16.2.1
+	netmask 255.255.255.240
+	gateway 172.16.2.12
+	dns-nameserver 172.16.2.12
+
+	bridge_ports eth0 eth1
+
+	bridge_stp on
+
+	bridge_maxwait 0

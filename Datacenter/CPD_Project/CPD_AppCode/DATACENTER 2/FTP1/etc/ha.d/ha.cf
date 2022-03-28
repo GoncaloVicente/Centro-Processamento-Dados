@@ -1,0 +1,26 @@
+use_logd on
+
+# intervalo de comunicação entre heartbeats
+keepalive 2
+
+# tempo de espera para registar um aviso
+warntime 5
+
+# tempo de espera para declarar o outro host morto
+deadtime 15
+
+# tempo máximo que o heartbeat espera para que outros nodes assumam o ip
+initdead 30
+
+# o primário fica sempre com o IP (caso este volte à vida)
+auto_failback on
+
+# interface a utilizar para o broadcast (ESTE OU O DE BAIXO)
+bcast br0
+
+# porta de comunicação utilizada pelo heartbeat
+udpport 694
+
+# lista de nós deste heartbeat
+node FTP1
+node FTP2

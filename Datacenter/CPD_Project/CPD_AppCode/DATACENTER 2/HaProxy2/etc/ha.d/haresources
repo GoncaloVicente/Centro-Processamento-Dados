@@ -1,0 +1,3 @@
+hostA 10.2.0.3/27/br0 haproxy
+hostA 172.16.2.12/28/br1 haproxy
+

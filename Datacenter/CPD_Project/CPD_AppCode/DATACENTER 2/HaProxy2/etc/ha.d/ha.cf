@@ -1,0 +1,19 @@
+use_logd on
+
+keepalive 2
+
+warntime 5
+
+deadtime 15
+
+initdead 30
+
+auto_failback on
+
+bcast br0
+
+udpport 694
+
+node hostA
+node hostB
+

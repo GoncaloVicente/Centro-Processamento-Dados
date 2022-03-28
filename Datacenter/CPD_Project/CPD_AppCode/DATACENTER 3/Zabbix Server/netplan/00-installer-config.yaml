@@ -1,0 +1,21 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: no
+    enp0s8:
+      dhcp4: no
+  bridges:
+    br0:
+     dhcp4: no
+     interfaces:
+        - enp0s3
+        - enp0s8
+     addresses: [10.3.0.13/16]
+     gateway4: 10.3.0.250
+     nameservers:
+        addresses: [10.3.0.250,10.1.1.3]
+     parameters: 
+           stp: true
+           forward-delay: 4
+  version: 2
